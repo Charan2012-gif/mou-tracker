@@ -1,8 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// Initialize sample data if none exists
+if (!localStorage.getItem('users')) {
+  localStorage.setItem('users', JSON.stringify([
+    {
+      name: 'Admin User',
+      email: 'admin@moutracker.com',
+      password: 'admin123',
+      role: 'admin'
+    }
+  ]));
+}
+
+if (!localStorage.getItem('mous')) {
+  localStorage.setItem('mous', JSON.stringify([
+    {
+      industryName: 'Sample University',
+      duration: '3',
+      facultyName: 'Dr. John Smith',
+      facultyDetails: 'Head of Computer Science Department',
+      academicYear: '2023-2024',
+      purpose: 'Collaboration on research projects and student internships',
+      outcomes: 'Joint publications, student placements',
+      signedDate: '2023-06-15T00:00:00.000Z',
+      createdBy: 'admin@moutracker.com'
+    }
+  ]));
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +36,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
