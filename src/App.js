@@ -59,7 +59,7 @@ const PrivateRoute = ({ children }) => {
 
 const App = () => {
   return (
-    <HashRouter>
+    <Router>
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <main className="flex-grow-1">
@@ -92,7 +92,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
-    </HashRouter>
+    </Router>
   );
 };
 
