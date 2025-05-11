@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { isAuthenticated } from './utils/auth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -59,7 +59,7 @@ const PrivateRoute = ({ children }) => {
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <main className="flex-grow-1">
@@ -92,7 +92,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 
