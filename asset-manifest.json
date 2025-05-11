@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mou-tracker/static/css/main.470d61fe.css",
+    "main.js": "/mou-tracker/static/js/main.14a2b36f.js",
+    "index.html": "/mou-tracker/index.html",
+    "main.470d61fe.css.map": "/mou-tracker/static/css/main.470d61fe.css.map",
+    "main.14a2b36f.js.map": "/mou-tracker/static/js/main.14a2b36f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.470d61fe.css",
+    "static/js/main.14a2b36f.js"
+  ]
+}
