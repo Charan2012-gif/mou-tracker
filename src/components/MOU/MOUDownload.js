@@ -15,8 +15,7 @@ const MOUDownload = () => {
     const { name, value } = e.target;
     const newFilters = { ...filters, [name]: value };
     setFilters(newFilters);
-    
-    // Update filtered data in real-time
+
     const data = getFilteredMOUs(newFilters);
     setFilteredData(data);
   };
@@ -32,7 +31,6 @@ const MOUDownload = () => {
     <div className="container mt-4">
       <h2>Download MOU Data</h2>
       
-      {/* Filter Section */}
       <div className="card mb-4">
         <div className="card-header bg-light">
           <h5>Filter Options</h5>
@@ -94,7 +92,6 @@ const MOUDownload = () => {
         </div>
       </div>
 
-      {/* Preview Table */}
       <div className="card">
         <div className="card-header bg-light">
           <h5>Preview Filtered Data</h5>

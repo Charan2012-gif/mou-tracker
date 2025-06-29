@@ -2,8 +2,7 @@ export const checkForNotifications = () => {
     const mous = JSON.parse(localStorage.getItem('mous')) || [];
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const notifications = [];
-    
-    // Check for MOUs expiring in the next month
+
     const now = new Date();
     const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
     
@@ -22,7 +21,6 @@ export const checkForNotifications = () => {
       }
     });
     
-    // Check for MOUs created this month (for admins)
     if (currentUser.role === 'admin') {
       const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
       const newMous = mous.filter(mou => {

@@ -12,7 +12,6 @@ const Notifications = () => {
     const notifs = checkForNotifications();
     setNotifications(notifs);
     
-    // Show toast for each notification
     notifs.forEach(notif => {
       if (notif.type === 'renewal') {
         toast.warning(notif.message, { autoClose: 10000 });

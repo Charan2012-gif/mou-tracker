@@ -32,7 +32,6 @@ const MOUForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Convert file to base64 for storage
     if (formData.agreementFile) {
       const reader = new FileReader();
       reader.onload = (event) => {
